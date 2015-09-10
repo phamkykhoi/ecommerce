@@ -3267,5 +3267,51 @@
             "laravel",
             "lpm"
         ]
+    },
+    {
+        "name": "matriphe/iso-639",
+        "version": "1.0",
+        "version_normalized": "1.0.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/matriphe/php-iso-639.git",
+            "reference": "feba2bc2bab06390a5936f6f0ca70d9f0347c23b"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/matriphe/php-iso-639/zipball/feba2bc2bab06390a5936f6f0ca70d9f0347c23b",
+            "reference": "feba2bc2bab06390a5936f6f0ca70d9f0347c23b",
+            "shasum": ""
+        },
+        "require-dev": {
+            "phpunit/phpunit": "^4.7"
+        },
+        "time": "2015-06-25 19:57:24",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Matriphe\\ISO639\\": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Muhammad Zamroni",
+                "email": "halo@matriphe.com"
+            }
+        ],
+        "description": "PHP library to convert ISO-639-1 code to language name.",
+        "keywords": [
+            "639",
+            "iso",
+            "iso-639",
+            "lang",
+            "language",
+            "laravel"
+        ]
     }
 ]

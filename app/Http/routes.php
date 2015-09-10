@@ -11,7 +11,10 @@
 |
 */
 Route::get('/', function () {
-    return view('welcome');
+    echo __FILE__;
+    $iso = new Matriphe\ISO639\ISO639;
+    echo "<pre>";
+    print_r($iso->languages);
 });
 
 Route::post('login', 'SessionsController@store');

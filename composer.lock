@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "66ba7da9ed8891fe29b0c137f8d3686a",
+    "hash": "ad39898c04d9077a65e9b742a430138f",
     "packages": [
         {
             "name": "caouecs/laravel4-lang",
@@ -813,6 +813,50 @@
                 "storage"
             ],
             "time": "2015-07-28 20:41:58"
+        },
+        {
+            "name": "matriphe/iso-639",
+            "version": "1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/matriphe/php-iso-639.git",
+                "reference": "feba2bc2bab06390a5936f6f0ca70d9f0347c23b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/matriphe/php-iso-639/zipball/feba2bc2bab06390a5936f6f0ca70d9f0347c23b",
+                "reference": "feba2bc2bab06390a5936f6f0ca70d9f0347c23b",
+                "shasum": ""
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^4.7"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Matriphe\\ISO639\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Muhammad Zamroni",
+                    "email": "halo@matriphe.com"
+                }
+            ],
+            "description": "PHP library to convert ISO-639-1 code to language name.",
+            "keywords": [
+                "639",
+                "iso",
+                "iso-639",
+                "lang",
+                "language",
+                "laravel"
+            ],
+            "time": "2015-06-25 19:57:24"
         },
         {
             "name": "monolog/monolog",
