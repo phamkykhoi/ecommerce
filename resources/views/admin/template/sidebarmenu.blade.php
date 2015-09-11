@@ -383,23 +383,14 @@
     <li>
         <a href="#" class="menu-dropdown">
             <i class="menu-icon fa fa-align-right"></i>
-            <span class="menu-text"> Right to Left </span>
+            <span class="menu-text"> System</span>
 
             <i class="menu-expand"></i>
         </a>
         <ul class="submenu">
             <li>
-                <a>
-                    <span class="menu-text">RTL</span>
-                    <label class="pull-right margin-top-10">
-                        <input id="rtl-changer" class="checkbox-slider slider-icon colored-primary" type="checkbox">
-                        <span class="text"></span>
-                    </label>
-                </a>
-            </li>
-            <li>
-                <a href="index-rtl-ar.html">
-                    <span class="menu-text">Arabic Layout</span>
+                <a href="{{ route('admin.languagies.index') }}">
+                    <span class="menu-text">Language manage</span>
                 </a>
             </li>
 

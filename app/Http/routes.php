@@ -11,9 +11,7 @@
 |
 */
 Route::get('/', function () {
-    echo __FILE__;
     $iso = new Matriphe\ISO639\ISO639;
-    echo "<pre>";
     print_r($iso->languages);
 });
 
@@ -27,4 +25,5 @@ Route::group(['namespace' => 'Admin', 'middleware' => 'auth'], function() {
     Route::resource('admin/customers', 'CustomersController');
     Route::resource('admin/password', 'PasswordController', ['only' => ['create', 'store']]);
     Route::resource('admin/categories', 'CategoriesController');
+    Route::resource('admin/languagies', 'LanguagiesController');
 });
