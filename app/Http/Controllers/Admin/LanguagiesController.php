@@ -7,7 +7,6 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use Matriphe\ISO639\ISO639;
-
 class LanguagiesController extends Controller
 {
     /**
@@ -17,8 +16,9 @@ class LanguagiesController extends Controller
      */
     public function index()
     {
-        // $iso = new Matriphe\ISO639\ISO639;
-        return view('admin.languagies.index');
+        $languageObj = new ISO639;
+        return view('admin.languagies.index')
+            ->with('languagies', $languageObj->languages);
     }
 
     /**
