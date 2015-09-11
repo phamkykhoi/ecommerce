@@ -6,9 +6,11 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use App\Http\Requests\Admin\Languagies\CreateLanguageRequest;
 use Matriphe\ISO639\ISO639;
+
 class LanguagiesController extends Controller
-{
+{    
     /**
      * Display a listing of the resource.
      *
@@ -16,9 +18,8 @@ class LanguagiesController extends Controller
      */
     public function index()
     {
-        $languageObj = new ISO639;
         return view('admin.languagies.index')
-            ->with('languagies', $languageObj->languages);
+            ->with('languagies', $this->getLanguagies());
     }
 
     /**
@@ -28,7 +29,7 @@ class LanguagiesController extends Controller
      */
     public function create()
     {
-        //
+        
     }
 
     /**
@@ -37,9 +38,14 @@ class LanguagiesController extends Controller
      * @param  Request  $request
      * @return Response
      */
-    public function store(Request $request)
+    public function store(CreateLanguageRequest $request)
     {
-        //
+        echo $request->language_code;
+        echo "<pre>";
+        print_r($request->file('small_icon'));
+        die;
+        return view('admin.languagies.index')
+            ->with('languagies', $this->getLanguagies()); 
     }
 
     /**
@@ -85,5 +91,11 @@ class LanguagiesController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    protected function getLanguagies()
+    {
+        $languageObj = new ISO639;
+        return $languageObj->languages;
     }
 }

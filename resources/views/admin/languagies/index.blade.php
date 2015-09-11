@@ -12,42 +12,37 @@
                         </div>
                         <div class="widget-body">
                             <div class="collapse in">
-                                <form class="form-horizontal form-bordered" role="form">
+                                <ul>
+                                {!! Form::open(array('route' => 'admin.languagies.index', 
+                                        'class' => 'form-horizontal form-bordered', 
+                                        'novalidate' => 'novalidate', 
+                                        'files' => true,
+                                        'role' => 'form')) !!}
                                     <div class="form-group">
-                                        <label for="inputEmail3" class="col-sm-2 control-label no-padding-right">
-                                            Language
-                                        </label>
+                                        {!! Form::label('language', 'Language', ['class' => 'col-sm-2 control-label no-padding-right']) !!}
                                         <div class="col-sm-4">
-                                            <select class="form-control" class="col-sm-6" placeholder="Email">
-                                                @foreach($languagies as $code => $language)
-                                                    <option value="">{{ $language }}</option>
-                                                @endforeach
-                                            </select> 
+                                            {!! Form::select('language_code', $languagies, null, ['class' => 'form-control']) !!}
                                         </div>
                                     </div>
                                     <div class="form-group">
-                                        <label for="inputPassword3" class="col-sm-2 control-label no-padding-right">
-                                            Logo small
-                                        </label>
+                                        {!! Form::label('language', 'Small icon', ['class' => 'col-sm-2 control-label no-padding-right']) !!}
                                         <div class="col-sm-4">
-                                            <input type="file" class="form-control" />
+                                            {!! Form::file('small_icon', ['class' => 'form-control']) !!}
                                         </div>
                                     </div>
                                     <div class="form-group">
-                                        <label for="inputPassword3" class="col-sm-2 control-label no-padding-right">
-                                            Logo Lager
-                                        </label>
+                                        {!! Form::label('logo-lager', 'Lager icon', ['class' => 'col-sm-2 control-label no-padding-right']) !!}
                                         <div class="col-sm-4">
-                                            <input type="file" class="form-control" />
+                                            {!! Form::file('lager_icon', ['class' => 'form-control']) !!}
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <div class="col-sm-offset-2 col-sm-10">
-                                            <button type="submit" class="btn btn-palegreen">Create</button>
-                                            <button type="submit" class="btn btn-danger">Cancel</button>
+                                            {!! Form::submit('Save', ['class' => 'btn btn-palegreen']) !!}
+                                            {!! Form::submit('Cancel', ['class' => 'btn btn-danger']) !!}
                                         </div>
                                     </div>
-                                </form>
+                                {!! Form::close() !!}
                             </div>
                         </div>
                     </div>
